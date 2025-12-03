@@ -1,14 +1,18 @@
 import { Download, ExternalLink } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
 import profilePic from 'figma:asset/51a15940ead1d1708176fb3f5cc3e07d02ff5b7e.png';
+import resumePdf from '../../assets/JiHyun_CV.pdf';
 
 interface AboutProps {
   onNavigate: (page: string) => void;
 }
 
 export function About({ onNavigate }: AboutProps) {
+  // const handleDownloadResume = () => {
+  //   alert('Resume download would start here. Please link your actual resume file.');
+  // };
   const handleDownloadResume = () => {
-    alert('Resume download would start here. Please link your actual resume file.');
+    window.open(resumePdf, '_blank');
   };
 
   const technicalSkills = [
