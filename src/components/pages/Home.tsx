@@ -1,13 +1,15 @@
 import { Download, ArrowRight, BookOpen, Briefcase, GraduationCap, Linkedin, Mail } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
+import resumePdf from '../../assets/JiHyun_CV.pdf';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
 }
 
+
 export function Home({ onNavigate }: HomeProps) {
   const handleDownloadResume = () => {
-    alert('Resume download would start here. Please link your actual resume file.');
+    window.open(resumePdf, '_blank');
   };
 
   return (
