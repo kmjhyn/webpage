@@ -1,11 +1,27 @@
+# initial build
+npm install
+npm run build
+mv build docs #make docs folder
+git init
+echo "node_modules" >> .gitignore
+echo "dist">> .gitignore
+echo "build">> .gitignore
+git add .
+git commit -m "Initial commit"
 
-  # Personal Webpage Design
+//below three lines from git (after making blank repo, last section that says "or push an existing repository from the command line")
+git remote add origin git@github.com:kmjhyn/webpage.git
+git branch -M main
+git push -u origin main
 
-  This is a code bundle for Personal Webpage Design. The original project is available at https://www.figma.com/design/GhbHznNVoIhDsWIl9L24tF/Personal-Webpage-Design.
+//then go back to github, repo>settings>pages>sources: deploy from a branch / branch:main / folder:/docs
 
-  ## Running the code
 
-  Run `npm i` to install the dependencies.
+# making edits
+make edits on vs code
+terminal >>
+npm run build
+rm -rf docs
+mv build docs #changing the docs to the newly edited ones
 
-  Run `npm run dev` to start the development server.
-  
+VS source control, commit all chagnes and push
