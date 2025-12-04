@@ -7,41 +7,47 @@ interface EducationProps {
 
 export function Education({ onNavigate }: EducationProps) {
   const uvaCourses = [
-    'Advanced Machine Learning',
-    'Statistical Modeling',
-    'Data Mining',
+    'Machine Learning',
+    'Human-Computer Interaction',
+    'Computational Behavior Modeling',
     'Natural Language Processing',
-    'Computer Vision',
-    'Deep Learning Applications'
+    'Generative AI Seminar',
+    'Exploratory Text Analytics',
+    'Engineering Interactive Technologies',
+    'SP, ML, and Control'
   ];
 
   const uvaActivities = [
-    'Graduate Research Assistant',
-    'Data Science Club Member',
-    'Teaching Assistant for Intro to Statistics'
+    'Graduate Researcher (Human-AI Technology Lab)',
+    'Led/Contributed to multiple course-based applied projects (UX redesign, ML modeling, NLP, multi-agent systems)'
   ];
 
   const ewhaCourses = [
-    'Computer Science Fundamentals',
-    'Database Systems',
-    'Algorithms and Data Structures',
-    'Software Engineering',
-    'Web Development',
-    'Operating Systems'
+    'Data Analysis R',
+    'Statistics for Business',
+    'International Marketing',
+    'Foundations for Business English',
+    'Quantitatie and Financial Analysis',
+    'German Cities and Urban Humanites',
+    'German-English Interpreting',
+    'Musical Travelogue in German-speaking Countries'
   ];
 
   const ewhaActivities = [
-    'Computer Science Student Association',
-    'Hackathon Participant',
-    'Study Group Leader'
+    'Study Abroad Experiences to Barnard College and Frankfurt University of Applied Sciences',
+    'Ewha Peace Buddy Manager',
+    'Ewha Harvard Summer School Program'
   ];
 
   const onlineCourses = [
-    'Advanced Python Programming (Coursera)',
-    'Cloud Computing Specialization (AWS)',
-    'Machine Learning Engineering (Udacity)',
-    'Data Visualization with D3.js (edX)',
-    'Deep Learning Specialization (Coursera)'
+    'Data Structures (NILE)',
+    'Computer Systems (NILE)',
+    'C Language I (NILE)',
+    'Discrete Mathematics (NILE)',
+    '100 Days of Code: The Complete Python Pro Bootcamp (Udemy)',
+    'Complete Machine Learning and Data Science Bootcamp (Udemy)',
+    'Linear Algebra for Data Science and Machine Learning A-Z (Udemy)',
+    'Build Responsive Real-World Websites with HTML and CSS (Udemy)'
   ];
 
   return (
@@ -55,8 +61,8 @@ export function Education({ onNavigate }: EducationProps) {
             </div>
             <div className="flex-1">
               <h2 className="text-[#5A4F3D]">University of Virginia</h2>
-              <p className="text-[#A8956B] mb-1">Master of Science in Data Science</p>
-              <p className="text-sm text-[#7A6F5D]">2023 - Present</p>
+              <p className="text-[#A8956B] mb-1">Master of Computer Science</p>
+              <p className="text-sm text-[#7A6F5D]">2023 - 2025</p>
             </div>
           </div>
 
@@ -105,8 +111,8 @@ export function Education({ onNavigate }: EducationProps) {
             </div>
             <div className="flex-1">
               <h2 className="text-[#5A4F3D]">EWHA Womans University</h2>
-              <p className="text-[#A8956B] mb-1">Bachelor of Science in Computer Science</p>
-              <p className="text-sm text-[#7A6F5D]">2015 - 2019</p>
+              <p className="text-[#A8956B] mb-1">Bachelor of Arts in German Language Literature and International Studies</p>
+              <p className="text-sm text-[#7A6F5D]">2016 - 2021</p>
             </div>
           </div>
 

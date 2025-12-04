@@ -6,7 +6,6 @@ interface HomeProps {
   onNavigate: (page: string) => void;
 }
 
-
 export function Home({ onNavigate }: HomeProps) {
   const handleDownloadResume = () => {
     window.open(resumePdf, '_blank');
@@ -17,9 +16,9 @@ export function Home({ onNavigate }: HomeProps) {
       <div className="max-w-4xl mx-auto px-6 pt-32 pb-16">
         {/* Welcome Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl mb-6 text-[#5A4F3D]">Welcome to My Portfolio</h1>
+          <h1 className="text-5xl mb-6 text-[#5A4F3D]">Welcome to Ji Hyun's Website</h1>
           <p className="text-xl text-[#7A6F5D] max-w-2xl mx-auto leading-relaxed">
-            Hi! I'm Ji Hyun Kim. This is a curated space where you can explore my professional journey, 
+            Hi! I'm Ji Hyun Kim. This is a space where you can explore my professional journey, 
             academic achievements, and ongoing work. Navigate through the pages to learn more about me.
           </p>
         </div>

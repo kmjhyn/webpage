@@ -9,41 +9,42 @@ export function ResearchPortfolio({ onNavigate }: ResearchPortfolioProps) {
   const researchProjects = [
     {
       id: 1,
-      title: 'Project Title 1',
+      title: 'Social Walking',
       timeline: 'Ongoing',
       description: 'Detailed description of the research project, including objectives, methodologies, and expected outcomes. This section will be populated with actual project details as they become available for public disclosure.',
       publications: [
         {
           id: 1,
-          title: 'Publication Title Related to Project 1',
+          title: 'Publication Title Related to Social Walking',
           status: 'In Preparation',
           expectedDate: 'TBD',
-          description: 'Brief description of the publication and its key contributions to the field.'
+          description: 'Brief description of the publication and its key contributions to the field will be updated.'
         }
       ],
       currentUpdates: [
-        'Current update or achievement 1',
-        'Current update or achievement 2',
-        'Current update or achievement 3'
+        'Completed baseline survey data collection',
+        'Ran two participatory design workshops',
+        'Preparing for app-based pilot study'
       ]
     },
     {
       id: 2,
-      title: 'Project Title 2',
-      timeline: 'Completed',
+      title: 'Digital Footprints',
+      timeline: 'Ongoing',
       description: 'Detailed description of the research project, including objectives, methodologies, and outcomes. This section will showcase the completed work and its contributions.',
       publications: [
         {
           id: 2,
-          title: 'Publication Title Related to Project 2',
-          status: 'Under Review',
+          title: 'Publication Title Related to Digital Footprints',
+          status: 'In Preparation',
           expectedDate: 'TBD',
-          description: 'Brief description of the publication and its key contributions to the field.'
+          description: 'Brief description of the publication and its key contributions to the field will be updated.'
         }
       ],
       currentUpdates: [
-        'Final outcome or achievement 1',
-        'Final outcome or achievement 2'
+        'Completed initial pilot and preliminary data analysis',
+        'Exploring data structure and parsing methods',
+        'Developing early prototypes for data visualization'
       ]
     }
   ];
@@ -61,7 +62,7 @@ export function ResearchPortfolio({ onNavigate }: ResearchPortfolioProps) {
           </button>
           <h1 className="text-[#5A4F3D] mb-2">Research Portfolio</h1>
           <p className="text-[#7A6F5D]">
-            Publications, projects, and research contributions from my work as a Research Assistant
+            Publications, projects, and research contributions from my work as a Research Assistant in HAI Lab
           </p>
         </div>
 

@@ -13,27 +13,27 @@ export function BlogList({ onNavigate }: BlogListProps) {
   const allPosts = [
     {
       id: 1,
-      title: 'My Recent Podcast Discovery',
-      date: 'November 1, 2024',
-      dateValue: new Date('2024-11-01'),
-      category: 'Learning',
-      content: 'I recently listened to an amazing podcast about AI ethics and its implications for future research. Here are my key takeaways from the discussion: The importance of transparency in AI systems cannot be overstated. As we develop more sophisticated models, we must ensure that decision-making processes remain explainable and accountable. This episode featured experts from various fields discussing how we can build ethical frameworks that keep pace with technological advancement.'
-    },
-    {
-      id: 2,
-      title: 'Travel Reflection: Autumn in Virginia',
-      date: 'October 20, 2024',
-      dateValue: new Date('2024-10-20'),
-      category: 'Personal',
-      content: 'Fall colors in Charlottesville have been absolutely stunning this year. I took some time to explore the Blue Ridge Mountains and capture the beauty of the changing seasons. The hiking trails offered breathtaking views, and I found it to be a perfect opportunity to disconnect from work and reflect. There\'s something incredibly grounding about being in nature, especially during such a vibrant time of year. I highly recommend the Humpback Rocks trail for anyone visiting the area.'
-    },
-    {
-      id: 3,
-      title: 'Research Update: New Developments',
-      date: 'October 10, 2024',
-      dateValue: new Date('2024-10-10'),
+      title: 'Research Update: Participatory Design Workshop',
+      date: 'Nov 24, 2025',
+      dateValue: new Date('2025-11-24'),
       category: 'Research',
-      content: 'Exciting progress in my current research project! While I cannot share specifics yet, the preliminary results are promising and align with our initial hypotheses. The team has been incredibly supportive, and collaboration has been key to overcoming several technical challenges. We\'re currently in the data analysis phase, and I\'m learning so much about advanced statistical methods. Stay tuned for more updates as we move toward publication.'
+      content: 'Exciting progress and experience in my current research project! While I cannot share specifics yet, planning and executing an in-person participatory design workshop yielded interesting results that expanded my thoughts and ideas on our project. Lab members have been incredibly supportive and collaboration has been key to overcoming several challenges. We are currently in the analyzing the collected data and I am excited to implement this on our next study.'
+      // },
+    // {
+    //   id: 2,
+    //   title: 'Travel Reflection: Autumn in Virginia',
+    //   date: 'October 20, 2024',
+    //   dateValue: new Date('2024-10-20'),
+    //   category: 'Personal',
+    //   content: 'Fall colors in Charlottesville have been absolutely stunning this year. I took some time to explore the Blue Ridge Mountains and capture the beauty of the changing seasons. The hiking trails offered breathtaking views, and I found it to be a perfect opportunity to disconnect from work and reflect. There\'s something incredibly grounding about being in nature, especially during such a vibrant time of year. I highly recommend the Humpback Rocks trail for anyone visiting the area.'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'Research Update: New Developments',
+    //   date: 'October 10, 2024',
+    //   dateValue: new Date('2024-10-10'),
+    //   category: 'Research',
+    //   content: 'Exciting progress in my current research project! While I cannot share specifics yet, the preliminary results are promising and align with our initial hypotheses. The team has been incredibly supportive, and collaboration has been key to overcoming several technical challenges. We\'re currently in the data analysis phase, and I\'m learning so much about advanced statistical methods. Stay tuned for more updates as we move toward publication.'
     }
   ];
 

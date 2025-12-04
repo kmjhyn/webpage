@@ -9,49 +9,51 @@ export function WorkPortfolio({ onNavigate }: WorkPortfolioProps) {
   const portfolioProjects = [
     {
       id: 1,
-      title: 'Project Name 1',
-      role: 'Senior Data Analyst',
-      period: '2022-2023',
+      title: 'Global Electronics Service Experience Study',
+      role: 'Senior Research Executive',
+      period: '2023',
       icon: TrendingUp,
-      description: 'Comprehensive description of the project, including business objectives, challenges faced, and your specific contributions. This section will highlight the impact and value you brought to the organization.',
+      description: 'Led a large scale global research across 50+ countries in the consumer electronics and home appliance sector, examining customer satisfaction with repair services through both qualitative and quantitative methods. Contributed to UX-focused in-person research in Europe by preparing moderator guidelines, outlining study framework, observing user sessions, and synthesizing insights into client-facing deliverables.',
       achievements: [
-        'Specific achievement or metric (e.g., "Improved efficiency by 40%")',
-        'Another key accomplishment or deliverable',
-        'Impact on business outcomes or stakeholders'
+        'Designed and refined qualitative research guidelines used across multiple regions',
+        'Conducted on-site UX observation sessions and produced behavioral insight summaries',
+        'Delivered the final country-level presentation and strategic recommendations'
       ],
-      technologies: ['Python', 'SQL', 'Tableau', 'AWS'],
-      outcomes: 'Brief summary of the project outcomes and business impact. Quantifiable results are particularly valuable here.'
+      technologies: ['Excel','Powerpoint','Qual & Quant CX methodologies'],
+      outcomes: 'Generated actionable insights that informed service strategy and improvement priorities across global markets.'
     },
     {
       id: 2,
-      title: 'Project Name 2',
-      role: 'Data Analyst',
-      period: '2021-2022',
+      title: 'Hospitality Experience & Satisfaction Tracking',
+      role: 'Research Executive',
+      period: '2021-2023',
       icon: Users,
-      description: 'Comprehensive description of the project, including business objectives, challenges faced, and your specific contributions. This project showcased collaboration across multiple teams.',
+      description: 'Supported multi-year customer satisfaction tracking research in the hospitality industry, focusing on hotel stay experiences, food & beverage services, and event services. Analyzed incoming survey data, identified shifts in user satisfaction patterns, and developed presentation materials for ongoing stakeholder updates. Participated in supplemental qualitative studies on dining experiences and wedding services in collaboration with senior researchers.',
       achievements: [
-        'Specific achievement or metric',
-        'Another key accomplishment or deliverable',
-        'Stakeholder feedback or recognition'
+        'Transformed large survey datasets into clear, narrative-driven insight decks',
+        'Contributed to qualitative analyses for supplemental studies and co-developed deliverables',
+        'Helped refine recurring survey instruments used annually for customer insights'
       ],
-      technologies: ['R', 'SQL', 'Power BI', 'Excel'],
-      outcomes: 'Brief summary of the project outcomes and business impact.'
+      technologies: ['Excel','Powerpoint', 'qualitative coding', 'survey analytics'],
+      outcomes: 'Provided continuous insights that guided service enhancements and informed annual business reviews for the client.'
     },
     {
       id: 3,
-      title: 'Project Name 3',
-      role: 'Junior Data Analyst',
-      period: '2019-2020',
+      title: 'Telecommunications Service & Digital Product Research',
+      role: 'Research Executive',
+      period: '2021-2023',
       icon: Zap,
-      description: 'Comprehensive description of the project, including business objectives, challenges faced, and your specific contributions. This early project demonstrated your analytical foundation.',
+      description: 'Conducted a variety of ad-hoc research studies in the telecommunications sector, covering AI-based customer service agents, digital product adoption, new feature usability, and OTT service experience evaluation. Worked across mixed-method studies to investigate customer needs, satisfaction drivers, and product usability issues.',
       achievements: [
-        'Specific achievement or metric',
-        'Learning outcomes and skills developed',
-        'Contribution to team goals'
+        'Analyzed user feedback on AI customer support tools to identify key pain points and opportunity areas',
+        'Supported UX and satisfaction research for newly launched services and digital offerings',
+        'Produced concise insight reports that informed product and service development teams'
       ],
-      technologies: ['Python', 'SQL', 'Excel', 'Pandas'],
-      outcomes: 'Brief summary of the project outcomes and your professional growth.'
+      technologies: ['Excel','Powerpoint', 'survey analysis', 'UX research methods'],
+      outcomes: 'Delivered timely insights that shaped feature planning, improved user experience, and supported decision-making across multiple service lines.'
     }
+// **add Channel project & KIA Key issue project**
+
   ];
 
   return (
@@ -67,7 +69,7 @@ export function WorkPortfolio({ onNavigate }: WorkPortfolioProps) {
           </button>
           <h1 className="text-[#5A4F3D] mb-2">Work Portfolio</h1>
           <p className="text-[#7A6F5D]">
-            Detailed showcase of projects and accomplishments from [Company Name] (2019-2023)
+            Detailed showcase of projects and accomplishments from Ipsos Korea (2021-2023)
           </p>
         </div>
 
@@ -76,9 +78,9 @@ export function WorkPortfolio({ onNavigate }: WorkPortfolioProps) {
           <FolderOpen size={48} className="mx-auto mb-4 opacity-90" />
           <h2 className="mb-3">Portfolio Coming Soon</h2>
           <p className="max-w-2xl mx-auto">
-            I'm currently compiling detailed case studies and project examples from my work experience. 
-            This page will showcase specific projects, methodologies, outcomes, and the impact of my work. 
-            Check back soon for comprehensive portfolio pieces!
+            I'm currently adding more case studies and project summaries from my past work. 
+            This page will continue to grow with additional projects, methodologies, and outcomes as I document them. 
+            Check back soon for upcoming portfolio updates!
           </p>
         </div>
 

@@ -17,31 +17,28 @@ export function Work({ onNavigate }: WorkProps) {
   ];
 
   const workSkills = [
-    'SQL',
     'Data Visualization',
-    'Business Intelligence',
-    'Python',
-    'R',
     'Tableau',
+    'Qualtrics',
+    'Microsoft Excel',
+    'Microsoft Powerpoint',
+    'Customer Experience',
+    'Marketing Research',
     'Project Management',
-    'Stakeholder Communication'
+    'Stakeholder Communication',
+    'Teamwork'
   ];
 
   const previousExperiences = [
     {
-      title: 'Senior Data Analyst',
-      dates: 'June 2022 - August 2023',
-      description: 'Led data analysis initiatives and developed predictive models to support business decision-making. Collaborated with cross-functional teams to implement data-driven solutions.'
+      title: 'Sr. Research Executive',
+      dates: 'April 2023 - May 2023',
+      description: 'Led UX investigations for a global electronics company by analyzing user behavior across websites, apps, and chat channels to inform product decisions and guide design enhancements.'
     },
     {
-      title: 'Data Analyst',
-      dates: 'January 2021 - May 2022',
-      description: 'Analyzed large datasets to identify trends and patterns. Created comprehensive reports and visualizations for stakeholders. Improved data processing efficiency by 40%.'
-    },
-    {
-      title: 'Junior Data Analyst',
-      dates: 'July 2019 - December 2020',
-      description: 'Assisted in data collection and preprocessing. Developed automated reporting systems. Supported senior analysts in various research projects.'
+      title: 'Research Executive',
+      dates: 'Mar 2021 - April 2023',
+      description: 'Conducted end-to-end customer experience research across electronics, automotive, and hospitality industries, designing surveys and interviews, analyzing multi-country data, and translating customer feedback into clear insights and UX or service improvement opportunities.'
     }
   ];
 
@@ -64,8 +61,8 @@ export function Work({ onNavigate }: WorkProps) {
             <div>
               <h3 className="mb-3 text-[#5A4F3D]">About the Lab</h3>
               <p className="text-[#7A6F5D] leading-relaxed">
-                I am currently working as a Research Assistant at the [Lab Name] under the supervision of [Professor Name]. 
-                Our lab focuses on cutting-edge research in [research area], exploring innovative approaches to [specific research focus]. 
+                I am currently working as a Research Assistant at the Human-AI Lab under the supervision of Professor Afsaneh Doryab. 
+                Our lab focuses on research in human-centered computing, personal health informatics, and mobile sensing, exploring innovative approaches to understanding everyday behaviors and leveraging digital traces to design technologies that support well-being. 
                 The interdisciplinary nature of our work brings together expertise from multiple fields to address complex challenges.
               </p>
             </div>
@@ -73,14 +70,16 @@ export function Work({ onNavigate }: WorkProps) {
             <div>
               <h3 className="mb-3 text-[#5A4F3D]">Current Project</h3>
               <p className="text-[#7A6F5D] leading-relaxed mb-4">
-                My primary research project investigates [project focus area]. While the specific details remain confidential 
-                as the work is pending publication, the project aims to develop novel methodologies for [general project goal]. 
-                I am responsible for [your role description], working closely with a collaborative team of researchers.
+                My primary research project investigates co-walk behavior, social connectedness, and activity patterns among university students.
+                While the specific details remain confidential as the work is in its early stages, the project aims to develop novel methodologies 
+                for designing and evaluating technologies that encourage meaningful social interaction and support physical well-being. 
+                I am responsible for designing studies, developing surveys and app based measurement tools, analyzing behavioral and digital trace data, 
+                and coordinating multi-phase user studies, working closely with a collaborative team of researchers.
               </p>
-              <p className="text-[#7A6F5D] leading-relaxed">
+              {/* <p className="text-[#7A6F5D] leading-relaxed">
                 The research involves comprehensive data analysis, experimental design, and the development of innovative 
                 solutions to [problem area]. Our preliminary findings suggest promising directions for future work in this domain.
-              </p>
+              </p> */}
             </div>
 
             <div className="bg-[#FAF8F3] rounded-lg p-6 border-l-4 border-[#A8956B]">
@@ -128,8 +127,8 @@ export function Work({ onNavigate }: WorkProps) {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-[#5A4F3D] mb-2">[Company Name]</h3>
-            <p className="text-[#A8956B]">July 2019 - August 2023</p>
+            <h3 className="text-[#5A4F3D] mb-2">[Ipsos Korea]</h3>
+            <p className="text-[#A8956B]">Mar 2021 - May 2023</p>
           </div>
 
           <div className="space-y-8 mb-8">
@@ -151,7 +150,7 @@ export function Work({ onNavigate }: WorkProps) {
               <div>
                 <h4 className="mb-2 text-[#5A4F3D]">Work Portfolio</h4>
                 <p className="text-[#7A6F5D]">
-                  View detailed examples of projects and accomplishments from my time at [Company Name]
+                  Detailed examples of projects and accomplishments from my time at Ipsos Korea will be updated soon.
                 </p>
               </div>
               <button

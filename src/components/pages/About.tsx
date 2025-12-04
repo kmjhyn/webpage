@@ -16,9 +16,10 @@ export function About({ onNavigate }: AboutProps) {
   };
 
   const technicalSkills = [
-    'Python', 'R', 'SQL', 'JavaScript', 'React',
+    'Python', 'SQL', 'Java',
     'Machine Learning', 'Data Analysis', 'Statistics',
-    'TensorFlow', 'PyTorch', 'Data Visualization'
+    'TensorFlow', 'PyTorch', 'Data Visualization',
+    'Pandas', 'NumPy', 'Scikit-learn', 'Matplotlib'
   ];
 
   const softSkills = [
@@ -30,21 +31,21 @@ export function About({ onNavigate }: AboutProps) {
   const pinnedPosts = [
     {
       id: 1,
-      title: 'My Recent Podcast Discovery',
-      date: 'November 1, 2024',
-      excerpt: 'I recently listened to an amazing podcast about AI ethics and its implications for future research. Here are my key takeaways...'
-    },
-    {
-      id: 2,
-      title: 'Travel Reflection: Autumn in Virginia',
-      date: 'October 20, 2024',
-      excerpt: 'Fall colors in Charlottesville have been absolutely stunning this year. I took some time to explore the Blue Ridge Mountains...'
-    },
-    {
-      id: 3,
-      title: 'Research Update: New Developments',
-      date: 'October 10, 2024',
-      excerpt: 'Exciting progress in my current research project! While I cannot share specifics yet, the preliminary results are promising...'
+      title: 'Research Update: Participatory Design Workshop',
+      date: 'Nov 24, 2025',
+      excerpt: 'Exciting progress and experience in my current research project! While I cannot share specifics yet, planning and executing...'
+    // },
+    // {
+    //   id: 2,
+    //   title: 'Travel Reflection: Autumn in Virginia',
+    //   date: 'October 20, 2024',
+    //   excerpt: 'Fall colors in Charlottesville have been absolutely stunning this year. I took some time to explore the Blue Ridge Mountains...'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'Research Update: New Developments',
+    //   date: 'October 10, 2024',
+    //   excerpt: 'Exciting progress in my current research project! While I cannot share specifics yet, the preliminary results are promising...'
     }
   ];
 
@@ -63,12 +64,12 @@ export function About({ onNavigate }: AboutProps) {
             <div className="flex-1">
               <h1 className="mb-4 text-[#5A4F3D]">Ji Hyun Kim</h1>
               <p className="text-[#7A6F5D] leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error.
+                I am Ji Hyun Kim, a Research Assistant in the Human-AI Technology Lab at the University of Virginia.
+                I work at the intersection of personal health informatics, mobile sensing, and human-centered computing.
+                I am interested in how everyday behaviors and digital traces can be translated into meaningful insights 
+                and used to design technologies that support well-being. My recent work includes studying co-walking behavior, 
+                analyzing digital footprints, and creating user-centered tools and prototypes that help people better understand 
+                their daily experience. 
               </p>
               
               <button

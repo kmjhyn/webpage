@@ -13,25 +13,21 @@ export function Projects({ onNavigate }: ProjectsProps) {
   const projects = {
     project1: {
       id: 'project1',
-      name: 'Predictive Analytics System',
-      subtitle: 'Machine Learning Course Final Project',
+      name: 'Redesigning Health App',
+      subtitle: 'HCI Course Final Project',
       keywords: ['Python', 'TensorFlow', 'Data Analysis', 'Neural Networks'],
       sections: [
         {
-          title: 'Project Overview',
-          content: 'Developed a comprehensive predictive analytics system for forecasting customer behavior using advanced machine learning techniques. The project involved data preprocessing, feature engineering, model selection, and deployment strategies.'
+          title: 'Objectives',
+          content: 'In a collaborative project for my Human Computer Interaction course, we redesigned a health app that was falling short in sharing crucial information to its users. The goal was to transform how the app informed users about the personal health data it collected and utilized.'
         },
         {
-          title: 'My Role & Responsibilities',
-          content: 'As the lead developer, I was responsible for designing the neural network architecture, implementing the training pipeline, and optimizing model performance. I also collaborated with team members on data collection and validation strategies.'
+          title: 'Redesigning',
+          content: 'We used Figma to integrate user-friendly features: informative pop-ups that appeared at the moment of need, clear checkboxes for consent, easily recognizable info icons, an accessible FAQ section, and succinct bullet-point summaries replacing lengthy, jargon-filled text.'
         },
         {
-          title: 'Technical Implementation',
-          content: 'The system utilized TensorFlow for building deep learning models, with a focus on LSTM networks for time-series prediction. We implemented cross-validation techniques and hyperparameter tuning to achieve optimal results. The final model achieved 92% accuracy on the test dataset.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'Our analysis revealed significant patterns in customer behavior that were previously undetected. The model successfully predicted customer churn with high precision, enabling proactive retention strategies. We presented our findings at the course symposium and received recognition for innovative approach.'
+          title: 'UX Study & Results',
+          content: 'To measure the impact of our redesign, my team and I created and executed a user experience survey with several tasks so that the participants tries the app. We meticulously crafted a blend of qualitative and quantitative questions, including ones that tested the user\'s actual understanding of the information provided by both the original and redesigned app, and their experiences with both apps. Our analysis revealed that while we had significantly improved users\' understanding of the health information storage and usage policies, there was a nuanced distinction between understanding and awareness. This key finding showed the complexity of user engagement in reading privacy informations and the need for persistence in design.'
         }
       ]
     },
@@ -61,147 +57,135 @@ export function Projects({ onNavigate }: ProjectsProps) {
     },
     project3: {
       id: 'project3',
-      name: 'Computer Vision Application',
-      subtitle: 'Computer Vision Course - Object Detection',
-      keywords: ['Computer Vision', 'PyTorch', 'CNN', 'Object Detection'],
+      name: 'Exploring Machine Learning Classifi​ers',
+      subtitle: 'Machine Learning Course Final Project',
+      keywords: ['Machine Learning', 'Decision Tree', 'Random Forest', 'AdaBoost'],
       sections: [
         {
-          title: 'Project Overview',
-          content: 'Developed an object detection system using convolutional neural networks for real-time image analysis. The project aimed to identify and classify multiple objects within complex scenes with high accuracy.'
+          title: 'Objectives',
+          content: 'In our Machine Learning course, my team explored  two MNIST datasets using various machine learning techniques. Our primary goal was to identify the most effective classifier and parameter settings for optimal data classification. My role in this project was focusing on in-depth experimentation of Decision Tree, Random Forest, and Boosting for analysis to uncover the best solutions.'
         },
         {
-          title: 'My Role & Responsibilities',
-          content: 'Led the implementation of the YOLO-based detection framework, coordinated dataset annotation efforts, and optimized the model for real-time inference. I also managed the integration of the system with a web-based interface.'
+          title: 'Process',
+          content: 'I began by delving into the Decision Tree classifier, comparing different parameter combinations such as Gini index vs. Entropy, along with max_depth and min_samples_leaf, to ascertain the optimal setup through cross-validation. Building on this, I expanded my exploration to the Random Forest classifier, analyzing the effects of n_estimators and max_depth on model performance. The evaluation of classifier performance was comprehensive, based on a 10-fold Cross Validation in terms of accuracy, precision, recall, F1 score, and AUC to ensure a holistic understanding of each model\'s strengths and weaknesses. Moreover, I experimented with AdaBoost, a technique known for its ability to integrate multiple weak learners into a formidable ensemble model. This approach was particularly intriguing due to its inherent resistance to overfitting, a challenge I noted in both Decision Tree and Random Forest models under certain conditions.'
         },
         {
-          title: 'Technical Implementation',
-          content: 'Implemented YOLOv5 architecture using PyTorch, with custom modifications for our specific use case. Applied techniques such as data augmentation, anchor box optimization, and model pruning to enhance performance and reduce latency.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'The final system achieved real-time detection at 30 FPS with mAP of 0.85. Successfully deployed the model as a web application, demonstrating practical applicability. The project received the "Best Technical Implementation" award in the course.'
+          title: 'Results',
+          content: 'Through iterative experimentation, especially with the n_estimators parameter in AdaBoost, I found valuable insights into the characteristics of the datasets. Notably, the simplicity of dataset 1\'s patterns, which were effectively captured by a minimal number of weak learners before showing signs of overfitting. This project was not just an exercise in applying machine learning algorithms; it was a deep dive into the nuanced interplay between classifier parameters and dataset characteristics, enriching my understanding of machine learning\'s practical applications and theoretical underpinnings.'
         }
       ]
     },
     project4: {
       id: 'project4',
-      name: 'Statistical Modeling Framework',
-      subtitle: 'Advanced Statistics - Time Series Analysis',
-      keywords: ['R', 'Statistics', 'Time Series', 'Forecasting'],
+      name: 'Multi-Agent Systems in Computational Behavior Modeling',
+      subtitle: 'Computational Behavior Modeling Course Final Project',
+      keywords: ['Multi-agent Path Finding', 'TK Algorithm', 'A* Algorithm'],
       sections: [
         {
-          title: 'Project Overview',
-          content: 'Developed a comprehensive statistical modeling framework for analyzing and forecasting time series data. The project explored various statistical methods including ARIMA, seasonal decomposition, and exponential smoothing.'
+          title: 'Objectives',
+          content: 'In Computational Behavior Modeling course, my team and I aimed at finding the efficiency of state-of-the-art multi-agent pathfinding and pickup and delivery systems. Our work was centered around a comprehensive comparison and optimization of state-of-the-art multi-agent algorithms, including the TK algorithm, Reinforcement Learning, and a simple a* algorithm, all tailored to a specifically designed environment to meet our project\'s objectives. I spearheaded the setting of the default environment, laying a solid foundation for our experiments. The environments as presented below, are representing small storages with narrow paths along the ​aisles, such as libraries and small stores. I took on the challenge of modifying the updated Token Passing algorithm to better fit our designated environment, conducting thorough tests on different parameters to identify the configurations that outperformed our baseline measures.'
         },
         {
-          title: 'My Role & Responsibilities',
-          content: 'Designed and implemented the complete modeling pipeline, from data exploration to model validation. Conducted extensive residual analysis and diagnostic testing to ensure model appropriateness.'
-        },
-        {
-          title: 'Technical Implementation',
-          content: 'Utilized R for statistical computing, implementing various time series models and comparing their performance. Applied cross-validation techniques and information criteria for model selection.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'The SARIMA model provided the best fit with lowest AIC and BIC values. Successfully forecasted future values with 95% confidence intervals, demonstrating strong predictive capability.'
+          title: 'Results',
+          content: 'The results included detailed analysis and comparison of the TK algorithm against other algorithms we had implemented, highlighting the nuanced performances and offering insights into their operational efficiencies. Interestingly, Reinforcement Learning did not stand out as we first expected it to be. This was due to the complexity of narrow paths, which was not suitable for the robots to learn, therefore successful training required extensive amount of time. Rather, Token Passing algorithms easily found out the path to achieve pickup and delivery tasks, avoid collision based on hard-coded conditions on waiting and taking detours. This project honed my problem-specification skills, allowing me to translate complex problem scenarios into actionable simulation steps and conditions. Adapting various algorithms to a unified testing environment presented significant initial challenges, yet through persistent experimentation, I gained a deep understanding of the mathematical principles driving algorithm performance under specific conditions.'
         }
       ]
-    },
-    project5: {
-      id: 'project5',
-      name: 'Big Data Processing Pipeline',
-      subtitle: 'Distributed Systems - Scalable Data Processing',
-      keywords: ['Spark', 'Hadoop', 'Scala', 'Big Data'],
-      sections: [
-        {
-          title: 'Project Overview',
-          content: 'Built a distributed data processing pipeline capable of handling large-scale datasets using Apache Spark and Hadoop ecosystem. The project focused on optimizing data transformations and aggregations for efficiency.'
-        },
-        {
-          title: 'My Role & Responsibilities',
-          content: 'Architected the ETL pipeline, optimized Spark jobs for performance, and implemented data quality checks. Managed cluster configuration and resource allocation for optimal throughput.'
-        },
-        {
-          title: 'Technical Implementation',
-          content: 'Implemented the pipeline using Spark with Scala, leveraging DataFrame API and Catalyst optimizer. Applied partitioning strategies and caching mechanisms to improve processing speed.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'Achieved 10x performance improvement over baseline implementation. Successfully processed 1TB+ of data daily with sub-hour latency, meeting all production requirements.'
-        }
-      ]
-    },
-    project6: {
-      id: 'project6',
-      name: 'Database Optimization Study',
-      subtitle: 'Database Systems - Query Performance',
-      keywords: ['SQL', 'PostgreSQL', 'Indexing', 'Optimization'],
-      sections: [
-        {
-          title: 'Project Overview',
-          content: 'Conducted a comprehensive study on database query optimization techniques and their impact on performance. Analyzed various indexing strategies, query execution plans, and database design patterns.'
-        },
-        {
-          title: 'My Role & Responsibilities',
-          content: 'Designed the experimental setup, implemented different optimization strategies, and benchmarked their performance. Documented findings and best practices for database optimization.'
-        },
-        {
-          title: 'Technical Implementation',
-          content: 'Used PostgreSQL to test various optimization techniques including B-tree indexing, query rewriting, and materialized views. Analyzed query plans using EXPLAIN ANALYZE.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'Identified optimal indexing strategies that reduced query execution time by up to 95%. Demonstrated the importance of understanding database internals for performance tuning.'
-        }
-      ]
-    },
-    project7: {
-      id: 'project7',
-      name: 'Web Application Development',
-      subtitle: 'Software Engineering - Full Stack Project',
-      keywords: ['React', 'Node.js', 'MongoDB', 'REST API'],
-      sections: [
-        {
-          title: 'Project Overview',
-          content: 'Developed a full-stack web application with modern architecture and best practices. The project emphasized clean code, testing, and deployment strategies for production-ready applications.'
-        },
-        {
-          title: 'My Role & Responsibilities',
-          content: 'Implemented both frontend and backend components, designed the API architecture, and established CI/CD pipeline. Led code reviews and ensured adherence to software engineering principles.'
-        },
-        {
-          title: 'Technical Implementation',
-          content: 'Built using React for frontend with Redux state management, Node.js/Express backend, and MongoDB database. Implemented JWT authentication, RESTful API design, and comprehensive testing suite.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'Successfully deployed the application with 99.9% uptime. Achieved test coverage of 85% and implemented automated testing in CI/CD pipeline. Received positive feedback from users and instructors.'
-        }
-      ]
-    },
-    project8: {
-      id: 'project8',
-      name: 'Reinforcement Learning Agent',
-      subtitle: 'AI Course - Game Playing Agent',
-      keywords: ['Python', 'Reinforcement Learning', 'Q-Learning', 'Neural Networks'],
-      sections: [
-        {
-          title: 'Project Overview',
-          content: 'Developed a reinforcement learning agent capable of learning optimal strategies through interaction with the environment. The project explored various RL algorithms and their applications.'
-        },
-        {
-          title: 'My Role & Responsibilities',
-          content: 'Implemented multiple RL algorithms including Q-learning and Deep Q-Networks (DQN). Designed reward functions and hyperparameter tuning strategies for optimal learning.'
-        },
-        {
-          title: 'Technical Implementation',
-          content: 'Used PyTorch to implement neural network-based value functions. Applied experience replay and target networks to stabilize training. Conducted extensive hyperparameter search.'
-        },
-        {
-          title: 'Key Findings & Results',
-          content: 'The DQN agent achieved superhuman performance after 10,000 episodes of training. Demonstrated effective exploration-exploitation balance and generalization to unseen scenarios.'
-        }
-      ]
+    // },
+    // project5: {
+    //   id: 'project5',
+    //   name: 'Big Data Processing Pipeline',
+    //   subtitle: 'Distributed Systems - Scalable Data Processing',
+    //   keywords: ['Spark', 'Hadoop', 'Scala', 'Big Data'],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Built a distributed data processing pipeline capable of handling large-scale datasets using Apache Spark and Hadoop ecosystem. The project focused on optimizing data transformations and aggregations for efficiency.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Architected the ETL pipeline, optimized Spark jobs for performance, and implemented data quality checks. Managed cluster configuration and resource allocation for optimal throughput.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Implemented the pipeline using Spark with Scala, leveraging DataFrame API and Catalyst optimizer. Applied partitioning strategies and caching mechanisms to improve processing speed.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'Achieved 10x performance improvement over baseline implementation. Successfully processed 1TB+ of data daily with sub-hour latency, meeting all production requirements.'
+    //     }
+    //   ]
+    // },
+    // project6: {
+    //   id: 'project6',
+    //   name: 'Database Optimization Study',
+    //   subtitle: 'Database Systems - Query Performance',
+    //   keywords: ['SQL', 'PostgreSQL', 'Indexing', 'Optimization'],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Conducted a comprehensive study on database query optimization techniques and their impact on performance. Analyzed various indexing strategies, query execution plans, and database design patterns.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Designed the experimental setup, implemented different optimization strategies, and benchmarked their performance. Documented findings and best practices for database optimization.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Used PostgreSQL to test various optimization techniques including B-tree indexing, query rewriting, and materialized views. Analyzed query plans using EXPLAIN ANALYZE.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'Identified optimal indexing strategies that reduced query execution time by up to 95%. Demonstrated the importance of understanding database internals for performance tuning.'
+    //     }
+    //   ]
+    // },
+    // project7: {
+    //   id: 'project7',
+    //   name: 'Web Application Development',
+    //   subtitle: 'Software Engineering - Full Stack Project',
+    //   keywords: ['React', 'Node.js', 'MongoDB', 'REST API'],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Developed a full-stack web application with modern architecture and best practices. The project emphasized clean code, testing, and deployment strategies for production-ready applications.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Implemented both frontend and backend components, designed the API architecture, and established CI/CD pipeline. Led code reviews and ensured adherence to software engineering principles.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Built using React for frontend with Redux state management, Node.js/Express backend, and MongoDB database. Implemented JWT authentication, RESTful API design, and comprehensive testing suite.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'Successfully deployed the application with 99.9% uptime. Achieved test coverage of 85% and implemented automated testing in CI/CD pipeline. Received positive feedback from users and instructors.'
+    //     }
+    //   ]
+    // },
+    // project8: {
+    //   id: 'project8',
+    //   name: 'Reinforcement Learning Agent',
+    //   subtitle: 'AI Course - Game Playing Agent',
+    //   keywords: ['Python', 'Reinforcement Learning', 'Q-Learning', 'Neural Networks'],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Developed a reinforcement learning agent capable of learning optimal strategies through interaction with the environment. The project explored various RL algorithms and their applications.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Implemented multiple RL algorithms including Q-learning and Deep Q-Networks (DQN). Designed reward functions and hyperparameter tuning strategies for optimal learning.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Used PyTorch to implement neural network-based value functions. Applied experience replay and target networks to stabilize training. Conducted extensive hyperparameter search.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'The DQN agent achieved superhuman performance after 10,000 episodes of training. Demonstrated effective exploration-exploitation balance and generalization to unseen scenarios.'
+    //     }
+    //   ]
     }
   };
 
