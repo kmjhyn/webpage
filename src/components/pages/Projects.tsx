@@ -208,44 +208,49 @@ export function Projects({ onNavigate }: ProjectsProps) {
           {/* Project Images */}
           {currentProject.images.length > 0 && (
             <div className="mb-8">
-              {/* Main Image Display */}
-              <div className="relative bg-white rounded-lg border border-[#E8DCC8] p-4">
-                <div className="flex items-center justify-center" style={{ minHeight: '300px' }}>
-                  <img 
-                    src={currentProject.images[currentImageIndex]} 
-                    alt={`${currentProject.name} - Image ${currentImageIndex + 1}`}
-                    className="max-w-full max-h-[500px] object-contain"
-                  />
-                </div>
-                
-                {/* Navigation Arrows - positioned on the sides */}
+              {/* Main Image + Arrows */}
+              <div className="flex items-center gap-4 bg-[#FAF8F3] rounded-lg border border-[#E8DCC8] p-4">
+                {/* Prev button */}
                 {currentProject.images.length > 1 && (
-                  <>
-                    <button
-                      onClick={prevImage}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-md transition-all hover:shadow-lg"
-                      aria-label="Previous image"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    <button
-                      onClick={nextImage}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-md transition-all hover:shadow-lg"
-                      aria-label="Next image"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
-                  </>
+                  <button
+                    onClick={prevImage}
+                    className="flex-shrink-0 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-md transition-all hover:shadow-lg"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
                 )}
-                
-                {/* Image Counter */}
-                {currentProject.images.length > 1 && (
-                  <div className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
-                    {currentImageIndex + 1} / {currentProject.images.length}
+
+                {/* Main image */}
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="w-full max-w-3xl aspect-video bg-white rounded-lg border border-[#E8DCC8] overflow-hidden flex items-center justify-center">
+                    <img
+                      src={currentProject.images[currentImageIndex]}
+                      alt={`${currentProject.name} - Image ${currentImageIndex + 1}`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
+                </div>
+
+                {/* Next button */}
+                {currentProject.images.length > 1 && (
+                  <button
+                    onClick={nextImage}
+                    className="flex-shrink-0 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-md transition-all hover:shadow-lg"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
                 )}
               </div>
-              
+
+              {/* Image Counter */}
+              {currentProject.images.length > 1 && (
+                <div className="mt-2 text-center text-xs text-[#7A6F5D]">
+                  Image {currentImageIndex + 1} of {currentProject.images.length}
+                </div>
+              )}
+
               {/* Thumbnail Navigation */}
               {currentProject.images.length > 1 && (
                 <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
@@ -253,14 +258,14 @@ export function Projects({ onNavigate }: ProjectsProps) {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-16 h-16 rounded border-2 transition-colors overflow-hidden ${
+                      className={`flex-shrink-0 w-12 h-12 rounded border-2 transition-all overflow-hidden ${
                         currentImageIndex === index
-                          ? 'border-[#A8956B]'
+                          ? 'border-[#A8956B] scale-105'
                           : 'border-[#E8DCC8] hover:border-[#D4C5A9]'
                       }`}
                     >
-                      <img 
-                        src={image} 
+                      <img
+                        src={image}
                         alt={`Thumbnail ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
@@ -270,6 +275,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
               )}
             </div>
           )}
+
 
           {/* Project Sections */}
           <div className="space-y-8">
