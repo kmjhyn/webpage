@@ -30,6 +30,14 @@ import cbm12 from '../../assets/projects/project-cbm_12.png';
 import cbm13 from '../../assets/projects/project-cbm_13.png';
 import cbm14 from '../../assets/projects/project-cbm_14.png';
 
+// 🔹 NLP
+import nlp1 from '../../assets/projects/project-nlp_1.png';
+import nlp2 from '../../assets/projects/project-nlp_2.png';
+import nlp3 from '../../assets/projects/project-nlp_3.png';
+import nlp4 from '../../assets/projects/project-nlp_4.png';
+import nlp5 from '../../assets/projects/project-nlp_5.png';
+
+
 interface ProjectsProps {
   onNavigate: (page: string) => void;
 }
@@ -65,23 +73,19 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Sentiment Analysis on Youtube Comments',
       subtitle: 'Natural Language Processing Course Final Project',
       keywords: ['NLP', 'BERT', 'Transformers', 'Python', 'Youtube API'],
-      images: [],
+      images: [nlp1, nlp2, nlp3, nlp4, nlp5],
       sections: [
         {
           title: 'Project Overview',
-          content: 'Built a robust NLP pipeline for analyzing sentiment in social media data. The project explored various transformer architectures and their effectiveness in understanding context and emotional tone in text data.'
-        },
-        {
-          title: 'My Role & Responsibilities',
-          content: 'I focused on implementing the BERT-based model, fine-tuning pre-trained transformers, and developing the data preprocessing pipeline. My responsibilities included handling imbalanced datasets and implementing evaluation metrics.'
+          content: 'In this project, my team and I built a sentiment analysis pipeline for short, informal texts using Twitter data and real-time YouTube comments. We compared traditional machine learning models with BERT to see which approach works better for classifying sentiment in short texts, and then extended the best model into a tool that can track sentiment not only overall, but also across specific subtopics (e.g., “risk”, “jobs”) and over time. Our main case study focused on public reactions to the “impact of AI” based on comments from trending YouTube videos.'
         },
         {
           title: 'Technical Implementation',
-          content: 'Leveraged Hugging Face transformers library to implement state-of-the-art NLP models. Applied techniques such as data augmentation, transfer learning, and ensemble methods to improve model robustness across different domains.'
+          content: 'We used the Sentiment140 Twitter dataset (1.6M tweets, subsampled for computation) and a custom YouTube comments dataset collected via the YouTube Data API for videos related to “impact of AI.” After preprocessing (lowercasing, cleaning noise, converting emojis to sentiment words, keeping stopwords, and applying TF-IDF with uni- and bi-grams), we trained five machine learning classifiers (Naive Bayes, Linear SVC, Logistic Regression, Random Forest, Gradient Boosting) and fine-tuned a multilingual BERT model for comparison. We then selected the top-performing ML models and applied them to unseen YouTube data, added a subtopic module using keyword extraction (BERT-based similarity + word2vec relevance scoring) to filter highly relevant comments, and aggregated comments by year to analyze sentiment change over time. Finally, we visualized results as topic and subtopic sentiment charts, time-series plots, and word clouds to support more intuitive interpretation.'
         },
         {
-          title: 'Key Findings & Results',
-          content: 'Achieved F1-score of 0.89 on the test set, outperforming baseline models by 15%. The project demonstrated the importance of domain-specific fine-tuning and provided insights into sentiment patterns across different demographic groups.'
+          title: 'Key Findings and Results',
+          content: 'On the Twitter dataset, traditional ML models outperformed BERT: Logistic Regression achieved the highest accuracy (≈81%), while BERT reached about 66% on short, noisy tweets. When tested on real-time YouTube comments, Naive Bayes generalized best to unseen data, achieving the most reliable accuracy in a manually labeled subset, so we chose it as the final production model. Using this model, we found that overall sentiment toward the impact of AI was predominantly positive, with positive comments outnumbering negative ones for both the main topic and subtopics such as “risk” and “jobs,” and positive sentiment increasing in more recent years. The final system provides a multi-dimensional view of sentiment—by topic, subtopic, and timeline—along with key keywords driving each sentiment, making it easier for users to explore how public opinion evolves around complex issues.'
         }
       ]
     },
@@ -303,9 +307,9 @@ export function Projects({ onNavigate }: ProjectsProps) {
 
           {/* Project Images */}
           {currentProject.images.length > 0 && (
-            <div className="mb-8 bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
-              <div className="relative">
-                <div className="aspect-video bg-white rounded-lg overflow-hidden flex items-center justify-center">
+            <div className="mb-8">
+              <div className="relative bg-white rounded-lg border border-[#E8DCC8] overflow-hidden">
+                <div className="w-full" style={{ minHeight: '400px', maxHeight: '600px' }}>
                   <img 
                     src={currentProject.images[currentImageIndex]} 
                     alt={`${currentProject.name} - Image ${currentImageIndex + 1}`}
@@ -318,24 +322,24 @@ export function Projects({ onNavigate }: ProjectsProps) {
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors z-10"
                       aria-label="Previous image"
                     >
-                      <ChevronLeft size={24} />
+                      <ChevronLeft size={20} />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors z-10"
                       aria-label="Next image"
                     >
-                      <ChevronRight size={24} />
+                      <ChevronRight size={20} />
                     </button>
                   </>
                 )}
                 
                 {/* Image Counter */}
                 {currentProject.images.length > 1 && (
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                  <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
                     {currentImageIndex + 1} / {currentProject.images.length}
                   </div>
                 )}
@@ -348,9 +352,9 @@ export function Projects({ onNavigate }: ProjectsProps) {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                      className={`flex-shrink-0 w-24 h-16 rounded-md overflow-hidden border-2 transition-all ${
                         currentImageIndex === index
-                          ? 'border-[#A8956B] scale-105'
+                          ? 'border-[#A8956B]'
                           : 'border-[#E8DCC8] hover:border-[#D4C5A9]'
                       }`}
                     >
