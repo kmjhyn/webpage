@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
-// import { ImageWithFallback } from '../figma/ImageWithFallback';
+
 // 🔹 Redesigning Health App (project1)
 import health1 from '../../assets/projects/project-health_1.jpeg';
 import health2 from '../../assets/projects/project-health_2.png';
@@ -25,11 +25,10 @@ import cbm7 from '../../assets/projects/project-cbm_7.png';
 import cbm8 from '../../assets/projects/project-cbm_8.png';
 import cbm9 from '../../assets/projects/project-cbm_9.png';
 import cbm10 from '../../assets/projects/project-cbm_10.png';
-import cbm11 from '../../assets/projects/project-cbm_11.png';
+// import cbm11 from '../../assets/projects/project-cbm_11.png';
 import cbm12 from '../../assets/projects/project-cbm_12.png';
 import cbm13 from '../../assets/projects/project-cbm_13.png';
 import cbm14 from '../../assets/projects/project-cbm_14.png';
-
 
 interface ProjectsProps {
   onNavigate: (page: string) => void;
@@ -63,10 +62,10 @@ export function Projects({ onNavigate }: ProjectsProps) {
     },
     project2: {
       id: 'project2',
-      name: 'Natural Language Processing Pipeline',
-      subtitle: 'NLP Course - Sentiment Analysis',
+      name: 'Sentiment Analysis on Youtube Comments',
+      subtitle: 'Natural Language Processing Course Final Project',
       keywords: ['NLP', 'BERT', 'Transformers', 'Python', 'Youtube API'],
-      images: [],      
+      images: [],
       sections: [
         {
           title: 'Project Overview',
@@ -88,7 +87,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
     },
     project3: {
       id: 'project3',
-      name: 'Exploring Machine Learning Classifi​ers',
+      name: 'Exploring Machine Learning Classifiers',
       subtitle: 'Machine Learning Course Final Project',
       keywords: ['Machine Learning', 'Decision Tree', 'Random Forest', 'AdaBoost'],
       images: [ml1, ml2, ml3, ml4, ml5],
@@ -123,6 +122,81 @@ export function Projects({ onNavigate }: ProjectsProps) {
           content: 'The results included detailed analysis and comparison of the TK algorithm against other algorithms we had implemented, highlighting the nuanced performances and offering insights into their operational efficiencies. Interestingly, Reinforcement Learning did not stand out as we first expected it to be. This was due to the complexity of narrow paths, which was not suitable for the robots to learn, therefore successful training required extensive amount of time. Rather, Token Passing algorithms easily found out the path to achieve pickup and delivery tasks, avoid collision based on hard-coded conditions on waiting and taking detours. This project honed my problem-specification skills, allowing me to translate complex problem scenarios into actionable simulation steps and conditions. Adapting various algorithms to a unified testing environment presented significant initial challenges, yet through persistent experimentation, I gained a deep understanding of the mathematical principles driving algorithm performance under specific conditions.'
         }
       ]
+    // },
+    // project5: {
+    //   id: 'project5',
+    //   name: 'Big Data Processing Pipeline',
+    //   subtitle: 'Distributed Systems - Scalable Data Processing',
+    //   keywords: ['Spark', 'Hadoop', 'Scala', 'Big Data'],
+    //   images: [],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Built a distributed data processing pipeline capable of handling large-scale datasets using Apache Spark and Hadoop ecosystem. The project focused on optimizing data transformations and aggregations for efficiency.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Architected the ETL pipeline, optimized Spark jobs for performance, and implemented data quality checks. Managed cluster configuration and resource allocation for optimal throughput.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Implemented the pipeline using Spark with Scala, leveraging DataFrame API and Catalyst optimizer. Applied partitioning strategies and caching mechanisms to improve processing speed.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'Achieved 10x performance improvement over baseline implementation. Successfully processed 1TB+ of data daily with sub-hour latency, meeting all production requirements.'
+    //     }
+    //   ]
+    // },
+    // project6: {
+    //   id: 'project6',
+    //   name: 'Database Optimization Study',
+    //   subtitle: 'Database Systems - Query Performance',
+    //   keywords: ['SQL', 'PostgreSQL', 'Indexing', 'Optimization'],
+    //   images: [],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Conducted a comprehensive study on database query optimization techniques and their impact on performance. Analyzed various indexing strategies, query execution plans, and database design patterns.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Designed the experimental setup, implemented different optimization strategies, and benchmarked their performance. Documented findings and best practices for database optimization.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Used PostgreSQL to test various optimization techniques including B-tree indexing, query rewriting, and materialized views. Analyzed query plans using EXPLAIN ANALYZE.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'Identified optimal indexing strategies that reduced query execution time by up to 95%. Demonstrated the importance of understanding database internals for performance tuning.'
+    //     }
+    //   ]
+    // },
+    // project7: {
+    //   id: 'project7',
+    //   name: 'Web Application Development',
+    //   subtitle: 'Software Engineering - Full Stack Project',
+    //   keywords: ['React', 'Node.js', 'MongoDB', 'REST API'],
+    //   images: [],
+    //   sections: [
+    //     {
+    //       title: 'Project Overview',
+    //       content: 'Developed a full-stack web application with modern architecture and best practices. The project emphasized clean code, testing, and deployment strategies for production-ready applications.'
+    //     },
+    //     {
+    //       title: 'My Role & Responsibilities',
+    //       content: 'Implemented both frontend and backend components, designed the API architecture, and established CI/CD pipeline. Led code reviews and ensured adherence to software engineering principles.'
+    //     },
+    //     {
+    //       title: 'Technical Implementation',
+    //       content: 'Built using React for frontend with Redux state management, Node.js/Express backend, and MongoDB database. Implemented JWT authentication, RESTful API design, and comprehensive testing suite.'
+    //     },
+    //     {
+    //       title: 'Key Findings & Results',
+    //       content: 'Successfully deployed the application with 99.9% uptime. Achieved test coverage of 85% and implemented automated testing in CI/CD pipeline. Received positive feedback from users and instructors.'
+    //     }
+    //   ]
     // },
     // project8: {
     //   id: 'project8',
@@ -188,7 +262,6 @@ export function Projects({ onNavigate }: ProjectsProps) {
           <h1 className="text-[#5A4F3D]">UVA Course Projects</h1>
           <p className="text-[#7A6F5D]">Detailed overview of academic projects</p>
         </div>
-
 
         {/* Project Navigation Menu */}
         <div className="bg-white rounded-lg border border-[#D4C5A9] p-4 mb-8">
