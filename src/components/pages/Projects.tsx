@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowLeft, Tag } from 'lucide-react';
+import { ArrowLeft, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
 // import { ImageWithFallback } from '../figma/ImageWithFallback';
 // 🔹 Redesigning Health App (project1)
