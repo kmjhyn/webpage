@@ -2,6 +2,34 @@ import { useState } from 'react';
 import { ArrowLeft, Tag } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
+// 🔹 Redesigning Health App (project1)
+import health1 from '../../assets/projects/project-health_1.jpeg';
+import health2 from '../../assets/projects/project-health_2.png';
+import health3 from '../../assets/projects/project-health_3.png';
+
+// 🔹 Exploring Machine Learning Classifiers (project3)
+import ml1 from '../../assets/projects/project-ml_1.png';
+import ml2 from '../../assets/projects/project-ml_2.png';
+import ml3 from '../../assets/projects/project-ml_3.png';
+import ml4 from '../../assets/projects/project-ml_4.png';
+import ml5 from '../../assets/projects/project-ml_5.png';
+
+// 🔹 Multi-Agent Systems in Computational Behavior Modeling (project4)
+import cbm1 from '../../assets/projects/project-cbm_1.png';
+import cbm2 from '../../assets/projects/project-cbm_2.png';
+import cbm3 from '../../assets/projects/project-cbm_3.png';
+import cbm4 from '../../assets/projects/project-cbm_4.png';
+import cbm5 from '../../assets/projects/project-cbm_5.png';
+import cbm6 from '../../assets/projects/project-cbm_6.png';
+import cbm7 from '../../assets/projects/project-cbm_7.png';
+import cbm8 from '../../assets/projects/project-cbm_8.png';
+import cbm9 from '../../assets/projects/project-cbm_9.png';
+import cbm10 from '../../assets/projects/project-cbm_10.png';
+import cbm11 from '../../assets/projects/project-cbm_11.png';
+import cbm12 from '../../assets/projects/project-cbm_12.png';
+import cbm13 from '../../assets/projects/project-cbm_13.png';
+import cbm14 from '../../assets/projects/project-cbm_14.png';
+
 
 interface ProjectsProps {
   onNavigate: (page: string) => void;
@@ -16,6 +44,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Redesigning Health App',
       subtitle: 'HCI Course Final Project',
       keywords: ['Python', 'TensorFlow', 'Data Analysis', 'Neural Networks'],
+      images: [health1, health2, health3],
       sections: [
         {
           title: 'Objectives',
@@ -60,6 +89,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Exploring Machine Learning Classifi​ers',
       subtitle: 'Machine Learning Course Final Project',
       keywords: ['Machine Learning', 'Decision Tree', 'Random Forest', 'AdaBoost'],
+      images: [ml1, ml2, ml3, ml4, ml5],
       sections: [
         {
           title: 'Objectives',
@@ -80,6 +110,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Multi-Agent Systems in Computational Behavior Modeling',
       subtitle: 'Computational Behavior Modeling Course Final Project',
       keywords: ['Multi-agent Path Finding', 'TK Algorithm', 'A* Algorithm'],
+      images: [cbm1, cbm2, cbm3, cbm4, cbm5, cbm6, cbm7, cbm8, cbm9, cbm10, cbm11, cbm12, cbm13, cbm14],
       sections: [
         {
           title: 'Objectives',
@@ -245,12 +276,42 @@ export function Projects({ onNavigate }: ProjectsProps) {
             </div>
           </div>
 
-          {/* Project Screenshots Placeholder */}
-          <div className="mb-8 bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
+          {/* Project Screenshots, no image Placeholder */}
+          <div className="mb-8">
+            {currentProject.images && currentProject.images.length > 0 ? (
+              <>
+                <h3 className="mb-4 text-[#5A4F3D]">Screenshots</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {currentProject.images.map((img, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-lg overflow-hidden border border-[#E8DCC8] bg-[#FAF8F3]"
+                    >
+                      <ImageWithFallback
+                        src={img}
+                        alt={`${currentProject.name} screenshot ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
+                <div className="aspect-video bg-gradient-to-br from-[#E8DCC8] to-[#D4C5A9] rounded-lg flex items-center justify-center">
+                  <p className="text-[#7A6F5D]">Project Screenshot Placeholder</p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ------only placeholder og code------ */}
+          {/* <div className="mb-8 bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
             <div className="aspect-video bg-gradient-to-br from-[#E8DCC8] to-[#D4C5A9] rounded-lg flex items-center justify-center">
               <p className="text-[#7A6F5D]">Project Screenshot Placeholder</p>
             </div>
-          </div>
+          </div> */}
+          {/* ------only placeholder og code------ */}
 
           {/* Project Sections */}
           <div className="space-y-8">
