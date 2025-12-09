@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, Tag } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
+// import { ImageWithFallback } from '../figma/ImageWithFallback';
 // 🔹 Redesigning Health App (project1)
 import health1 from '../../assets/projects/project-health_1.jpeg';
 import health2 from '../../assets/projects/project-health_2.png';
@@ -37,13 +37,14 @@ interface ProjectsProps {
 
 export function Projects({ onNavigate }: ProjectsProps) {
   const [selectedProject, setSelectedProject] = useState('project1');
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projects = {
     project1: {
       id: 'project1',
       name: 'Redesigning Health App',
       subtitle: 'HCI Course Final Project',
-      keywords: ['Python', 'TensorFlow', 'Data Analysis', 'Neural Networks'],
+      keywords: ['Human Computer Interaction', 'UX & UI', 'Figma', 'Health', 'Personal Information'],
       images: [health1, health2, health3],
       sections: [
         {
@@ -64,7 +65,8 @@ export function Projects({ onNavigate }: ProjectsProps) {
       id: 'project2',
       name: 'Natural Language Processing Pipeline',
       subtitle: 'NLP Course - Sentiment Analysis',
-      keywords: ['NLP', 'BERT', 'Transformers', 'Python'],
+      keywords: ['NLP', 'BERT', 'Transformers', 'Python', 'Youtube API'],
+      images: [],      
       sections: [
         {
           title: 'Project Overview',
@@ -89,7 +91,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Exploring Machine Learning Classifi​ers',
       subtitle: 'Machine Learning Course Final Project',
       keywords: ['Machine Learning', 'Decision Tree', 'Random Forest', 'AdaBoost'],
-      images: [ml2, ml3, ml4, ml5],
+      images: [ml1, ml2, ml3, ml4, ml5],
       sections: [
         {
           title: 'Objectives',
@@ -110,7 +112,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Multi-Agent Systems in Computational Behavior Modeling',
       subtitle: 'Computational Behavior Modeling Course Final Project',
       keywords: ['Multi-agent Path Finding', 'TK Algorithm', 'A* Algorithm'],
-      images: [cbm2, cbm3, cbm4, cbm5, cbm1, cbm6, cbm7, cbm8, cbm9, cbm10, cbm12, cbm13, cbm14],
+      images: [cbm1, cbm2, cbm3, cbm4, cbm5, cbm6, cbm7, cbm8, cbm9, cbm10, cbm12, cbm13, cbm14],
       sections: [
         {
           title: 'Objectives',
@@ -122,83 +124,12 @@ export function Projects({ onNavigate }: ProjectsProps) {
         }
       ]
     // },
-    // project5: {
-    //   id: 'project5',
-    //   name: 'Big Data Processing Pipeline',
-    //   subtitle: 'Distributed Systems - Scalable Data Processing',
-    //   keywords: ['Spark', 'Hadoop', 'Scala', 'Big Data'],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Built a distributed data processing pipeline capable of handling large-scale datasets using Apache Spark and Hadoop ecosystem. The project focused on optimizing data transformations and aggregations for efficiency.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Architected the ETL pipeline, optimized Spark jobs for performance, and implemented data quality checks. Managed cluster configuration and resource allocation for optimal throughput.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Implemented the pipeline using Spark with Scala, leveraging DataFrame API and Catalyst optimizer. Applied partitioning strategies and caching mechanisms to improve processing speed.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'Achieved 10x performance improvement over baseline implementation. Successfully processed 1TB+ of data daily with sub-hour latency, meeting all production requirements.'
-    //     }
-    //   ]
-    // },
-    // project6: {
-    //   id: 'project6',
-    //   name: 'Database Optimization Study',
-    //   subtitle: 'Database Systems - Query Performance',
-    //   keywords: ['SQL', 'PostgreSQL', 'Indexing', 'Optimization'],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Conducted a comprehensive study on database query optimization techniques and their impact on performance. Analyzed various indexing strategies, query execution plans, and database design patterns.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Designed the experimental setup, implemented different optimization strategies, and benchmarked their performance. Documented findings and best practices for database optimization.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Used PostgreSQL to test various optimization techniques including B-tree indexing, query rewriting, and materialized views. Analyzed query plans using EXPLAIN ANALYZE.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'Identified optimal indexing strategies that reduced query execution time by up to 95%. Demonstrated the importance of understanding database internals for performance tuning.'
-    //     }
-    //   ]
-    // },
-    // project7: {
-    //   id: 'project7',
-    //   name: 'Web Application Development',
-    //   subtitle: 'Software Engineering - Full Stack Project',
-    //   keywords: ['React', 'Node.js', 'MongoDB', 'REST API'],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Developed a full-stack web application with modern architecture and best practices. The project emphasized clean code, testing, and deployment strategies for production-ready applications.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Implemented both frontend and backend components, designed the API architecture, and established CI/CD pipeline. Led code reviews and ensured adherence to software engineering principles.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Built using React for frontend with Redux state management, Node.js/Express backend, and MongoDB database. Implemented JWT authentication, RESTful API design, and comprehensive testing suite.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'Successfully deployed the application with 99.9% uptime. Achieved test coverage of 85% and implemented automated testing in CI/CD pipeline. Received positive feedback from users and instructors.'
-    //     }
-    //   ]
-    // },
     // project8: {
     //   id: 'project8',
     //   name: 'Reinforcement Learning Agent',
     //   subtitle: 'AI Course - Game Playing Agent',
     //   keywords: ['Python', 'Reinforcement Learning', 'Q-Learning', 'Neural Networks'],
+    //   images: [],
     //   sections: [
     //     {
     //       title: 'Project Overview',
@@ -223,6 +154,26 @@ export function Projects({ onNavigate }: ProjectsProps) {
   const projectList = Object.values(projects);
   const currentProject = projects[selectedProject as keyof typeof projects];
 
+  // Reset image index when project changes
+  const handleProjectChange = (projectId: string) => {
+    setSelectedProject(projectId);
+    setCurrentImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (currentProject.images.length > 0) {
+      setCurrentImageIndex((prev) => (prev + 1) % currentProject.images.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (currentProject.images.length > 0) {
+      setCurrentImageIndex((prev) => 
+        prev === 0 ? currentProject.images.length - 1 : prev - 1
+      );
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#FAF8F3]">
       <div className="max-w-6xl mx-auto px-6 pt-32 pb-16">
@@ -237,6 +188,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
           <h1 className="text-[#5A4F3D]">UVA Course Projects</h1>
           <p className="text-[#7A6F5D]">Detailed overview of academic projects</p>
         </div>
+
 
         {/* Project Navigation Menu */}
         <div className="bg-white rounded-lg border border-[#D4C5A9] p-4 mb-8">
@@ -276,42 +228,70 @@ export function Projects({ onNavigate }: ProjectsProps) {
             </div>
           </div>
 
-          {/* Project Screenshots, no image Placeholder */}
-          <div className="mb-8">
-            {currentProject.images && currentProject.images.length > 0 ? (
-              <>
-                <h3 className="mb-4 text-[#5A4F3D]">Screenshots</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {currentProject.images.map((img, idx) => (
-                    <div
-                      key={idx}
-                      className="rounded-lg overflow-hidden border border-[#E8DCC8] bg-[#FAF8F3]"
+          {/* Project Images */}
+          {currentProject.images.length > 0 && (
+            <div className="mb-8 bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
+              <div className="relative">
+                <div className="aspect-video bg-white rounded-lg overflow-hidden flex items-center justify-center">
+                  <img 
+                    src={currentProject.images[currentImageIndex]} 
+                    alt={`${currentProject.name} - Image ${currentImageIndex + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Navigation Arrows */}
+                {currentProject.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors"
+                      aria-label="Previous image"
                     >
-                      <ImageWithFallback
-                        src={img}
-                        alt={`${currentProject.name} screenshot ${idx + 1}`}
+                      <ChevronLeft size={24} />
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors"
+                      aria-label="Next image"
+                    >
+                      <ChevronRight size={24} />
+                    </button>
+                  </>
+                )}
+                
+                {/* Image Counter */}
+                {currentProject.images.length > 1 && (
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                    {currentImageIndex + 1} / {currentProject.images.length}
+                  </div>
+                )}
+              </div>
+              
+              {/* Thumbnail Navigation */}
+              {currentProject.images.length > 1 && (
+                <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
+                  {currentProject.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                        currentImageIndex === index
+                          ? 'border-[#A8956B] scale-105'
+                          : 'border-[#E8DCC8] hover:border-[#D4C5A9]'
+                      }`}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`Thumbnail ${index + 1}`}
                         className="w-full h-full object-cover"
                       />
-                    </div>
+                    </button>
                   ))}
                 </div>
-              </>
-            ) : (
-              <div className="bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
-                <div className="aspect-video bg-gradient-to-br from-[#E8DCC8] to-[#D4C5A9] rounded-lg flex items-center justify-center">
-                  <p className="text-[#7A6F5D]">Project Screenshot Placeholder</p>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* ------only placeholder og code------ */}
-          {/* <div className="mb-8 bg-[#FAF8F3] rounded-lg p-8 border border-[#E8DCC8]">
-            <div className="aspect-video bg-gradient-to-br from-[#E8DCC8] to-[#D4C5A9] rounded-lg flex items-center justify-center">
-              <p className="text-[#7A6F5D]">Project Screenshot Placeholder</p>
+              )}
             </div>
-          </div> */}
-          {/* ------only placeholder og code------ */}
+          )}
 
           {/* Project Sections */}
           <div className="space-y-8">
