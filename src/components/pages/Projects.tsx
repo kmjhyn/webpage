@@ -89,7 +89,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Exploring Machine Learning Classifi​ers',
       subtitle: 'Machine Learning Course Final Project',
       keywords: ['Machine Learning', 'Decision Tree', 'Random Forest', 'AdaBoost'],
-      images: [ml1, ml2, ml3, ml4, ml5],
+      images: [ml2, ml3, ml4, ml5],
       sections: [
         {
           title: 'Objectives',
@@ -110,7 +110,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
       name: 'Multi-Agent Systems in Computational Behavior Modeling',
       subtitle: 'Computational Behavior Modeling Course Final Project',
       keywords: ['Multi-agent Path Finding', 'TK Algorithm', 'A* Algorithm'],
-      images: [cbm1, cbm2, cbm3, cbm4, cbm5, cbm6, cbm7, cbm8, cbm9, cbm10, cbm11, cbm12, cbm13, cbm14],
+      images: [cbm2, cbm3, cbm4, cbm5, cbm1, cbm6, cbm7, cbm8, cbm9, cbm10, cbm12, cbm13, cbm14],
       sections: [
         {
           title: 'Objectives',
