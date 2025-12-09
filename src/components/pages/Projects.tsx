@@ -126,106 +126,6 @@ export function Projects({ onNavigate }: ProjectsProps) {
           content: 'The results included detailed analysis and comparison of the TK algorithm against other algorithms we had implemented, highlighting the nuanced performances and offering insights into their operational efficiencies. Interestingly, Reinforcement Learning did not stand out as we first expected it to be. This was due to the complexity of narrow paths, which was not suitable for the robots to learn, therefore successful training required extensive amount of time. Rather, Token Passing algorithms easily found out the path to achieve pickup and delivery tasks, avoid collision based on hard-coded conditions on waiting and taking detours. This project honed my problem-specification skills, allowing me to translate complex problem scenarios into actionable simulation steps and conditions. Adapting various algorithms to a unified testing environment presented significant initial challenges, yet through persistent experimentation, I gained a deep understanding of the mathematical principles driving algorithm performance under specific conditions.'
         }
       ]
-    // },
-    // project5: {
-    //   id: 'project5',
-    //   name: 'Big Data Processing Pipeline',
-    //   subtitle: 'Distributed Systems - Scalable Data Processing',
-    //   keywords: ['Spark', 'Hadoop', 'Scala', 'Big Data'],
-    //   images: [],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Built a distributed data processing pipeline capable of handling large-scale datasets using Apache Spark and Hadoop ecosystem. The project focused on optimizing data transformations and aggregations for efficiency.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Architected the ETL pipeline, optimized Spark jobs for performance, and implemented data quality checks. Managed cluster configuration and resource allocation for optimal throughput.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Implemented the pipeline using Spark with Scala, leveraging DataFrame API and Catalyst optimizer. Applied partitioning strategies and caching mechanisms to improve processing speed.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'Achieved 10x performance improvement over baseline implementation. Successfully processed 1TB+ of data daily with sub-hour latency, meeting all production requirements.'
-    //     }
-    //   ]
-    // },
-    // project6: {
-    //   id: 'project6',
-    //   name: 'Database Optimization Study',
-    //   subtitle: 'Database Systems - Query Performance',
-    //   keywords: ['SQL', 'PostgreSQL', 'Indexing', 'Optimization'],
-    //   images: [],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Conducted a comprehensive study on database query optimization techniques and their impact on performance. Analyzed various indexing strategies, query execution plans, and database design patterns.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Designed the experimental setup, implemented different optimization strategies, and benchmarked their performance. Documented findings and best practices for database optimization.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Used PostgreSQL to test various optimization techniques including B-tree indexing, query rewriting, and materialized views. Analyzed query plans using EXPLAIN ANALYZE.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'Identified optimal indexing strategies that reduced query execution time by up to 95%. Demonstrated the importance of understanding database internals for performance tuning.'
-    //     }
-    //   ]
-    // },
-    // project7: {
-    //   id: 'project7',
-    //   name: 'Web Application Development',
-    //   subtitle: 'Software Engineering - Full Stack Project',
-    //   keywords: ['React', 'Node.js', 'MongoDB', 'REST API'],
-    //   images: [],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Developed a full-stack web application with modern architecture and best practices. The project emphasized clean code, testing, and deployment strategies for production-ready applications.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Implemented both frontend and backend components, designed the API architecture, and established CI/CD pipeline. Led code reviews and ensured adherence to software engineering principles.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Built using React for frontend with Redux state management, Node.js/Express backend, and MongoDB database. Implemented JWT authentication, RESTful API design, and comprehensive testing suite.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'Successfully deployed the application with 99.9% uptime. Achieved test coverage of 85% and implemented automated testing in CI/CD pipeline. Received positive feedback from users and instructors.'
-    //     }
-    //   ]
-    // },
-    // project8: {
-    //   id: 'project8',
-    //   name: 'Reinforcement Learning Agent',
-    //   subtitle: 'AI Course - Game Playing Agent',
-    //   keywords: ['Python', 'Reinforcement Learning', 'Q-Learning', 'Neural Networks'],
-    //   images: [],
-    //   sections: [
-    //     {
-    //       title: 'Project Overview',
-    //       content: 'Developed a reinforcement learning agent capable of learning optimal strategies through interaction with the environment. The project explored various RL algorithms and their applications.'
-    //     },
-    //     {
-    //       title: 'My Role & Responsibilities',
-    //       content: 'Implemented multiple RL algorithms including Q-learning and Deep Q-Networks (DQN). Designed reward functions and hyperparameter tuning strategies for optimal learning.'
-    //     },
-    //     {
-    //       title: 'Technical Implementation',
-    //       content: 'Used PyTorch to implement neural network-based value functions. Applied experience replay and target networks to stabilize training. Conducted extensive hyperparameter search.'
-    //     },
-    //     {
-    //       title: 'Key Findings & Results',
-    //       content: 'The DQN agent achieved superhuman performance after 10,000 episodes of training. Demonstrated effective exploration-exploitation balance and generalization to unseen scenarios.'
-    //     }
-    //   ]
     }
   };
 
@@ -308,28 +208,29 @@ export function Projects({ onNavigate }: ProjectsProps) {
           {/* Project Images */}
           {currentProject.images.length > 0 && (
             <div className="mb-8">
-              <div className="relative bg-white rounded-lg border border-[#E8DCC8] overflow-hidden">
-                <div className="w-full" style={{ minHeight: '400px', maxHeight: '600px' }}>
+              {/* Main Image Display */}
+              <div className="relative bg-white rounded-lg border border-[#E8DCC8] p-4">
+                <div className="flex items-center justify-center" style={{ minHeight: '300px' }}>
                   <img 
                     src={currentProject.images[currentImageIndex]} 
                     alt={`${currentProject.name} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-full object-contain"
+                    className="max-w-full max-h-[500px] object-contain"
                   />
                 </div>
                 
-                {/* Navigation Arrows */}
+                {/* Navigation Arrows - positioned on the sides */}
                 {currentProject.images.length > 1 && (
                   <>
                     <button
                       onClick={prevImage}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors z-10"
+                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-md transition-all hover:shadow-lg"
                       aria-label="Previous image"
                     >
                       <ChevronLeft size={20} />
                     </button>
                     <button
                       onClick={nextImage}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-lg transition-colors z-10"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-[#5A4F3D] p-2 rounded-full shadow-md transition-all hover:shadow-lg"
                       aria-label="Next image"
                     >
                       <ChevronRight size={20} />
@@ -339,7 +240,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
                 
                 {/* Image Counter */}
                 {currentProject.images.length > 1 && (
-                  <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+                  <div className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
                     {currentImageIndex + 1} / {currentProject.images.length}
                   </div>
                 )}
@@ -347,12 +248,12 @@ export function Projects({ onNavigate }: ProjectsProps) {
               
               {/* Thumbnail Navigation */}
               {currentProject.images.length > 1 && (
-                <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
+                <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
                   {currentProject.images.map((image, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-24 h-16 rounded-md overflow-hidden border-2 transition-all ${
+                      className={`flex-shrink-0 w-16 h-16 rounded border-2 transition-colors overflow-hidden ${
                         currentImageIndex === index
                           ? 'border-[#A8956B]'
                           : 'border-[#E8DCC8] hover:border-[#D4C5A9]'
