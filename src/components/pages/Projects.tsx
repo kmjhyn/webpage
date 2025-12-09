@@ -196,7 +196,7 @@ export function Projects({ onNavigate }: ProjectsProps) {
             {projectList.map((project) => (
               <button
                 key={project.id}
-                onClick={() => setSelectedProject(project.id)}
+                onClick={() => handleProjectChange(project.id)}
                 className={`px-4 py-3 rounded-md transition-colors text-left ${
                   selectedProject === project.id
                     ? 'bg-[#A8956B] text-white'
