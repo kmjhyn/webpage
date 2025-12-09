@@ -64,7 +64,16 @@ export function About({ onNavigate }: AboutProps) {
             <div className="flex-1">
               <h1 className="mb-4 text-[#5A4F3D]">Ji Hyun Kim</h1>
               <p className="text-[#7A6F5D] leading-relaxed mb-6">
-                I am Ji Hyun Kim, a Research Assistant in the Human-AI Technology Lab at the University of Virginia.
+                I am Ji Hyun Kim, a Research Assistant in the
+                <a
+                  href="https://hai-lab-uva.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#7A6F5D] underline hover:text-[#8A7859] ml-1"
+                >
+                  Human-AI Technology Lab
+                </a>
+                at the University of Virginia.
                 I work at the intersection of personal health informatics, mobile sensing, and human-centered computing.
                 I am interested in how everyday behaviors and digital traces can be translated into meaningful insights 
                 and used to design technologies that support well-being. My recent work includes studying co-walking behavior, 

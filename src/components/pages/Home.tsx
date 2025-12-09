@@ -18,8 +18,7 @@ export function Home({ onNavigate }: HomeProps) {
         <div className="text-center mb-16">
           <h1 className="text-5xl mb-6 text-[#5A4F3D]">Welcome to Ji Hyun's Website</h1>
           <p className="text-xl text-[#7A6F5D] max-w-2xl mx-auto leading-relaxed">
-            Hi! I'm Ji Hyun Kim. This is a space where you can explore my professional journey, 
-            academic achievements, and ongoing work. Navigate through the pages to learn more about me.
+            Hello! Welcome to my website!
           </p>
         </div>
 
@@ -75,7 +74,7 @@ export function Home({ onNavigate }: HomeProps) {
         <div className="bg-white rounded-lg border-2 border-[#A8956B] p-12">
           <h2 className="mb-4 text-[#5A4F3D] text-center">Get in Touch</h2>
           <p className="text-[#7A6F5D] mb-8 max-w-md mx-auto text-center">
-            Download my resume or reach out to connect. I'm always open to discussing new opportunities and collaborations.
+            You can download my resume or reach out to connect. I'm always open to discussing new opportunities and collaborations.
           </p>
           
           <div className="grid md:grid-cols-3 gap-6">
