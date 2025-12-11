@@ -52,7 +52,7 @@ export function Work({ onNavigate }: WorkProps) {
               <Microscope size={24} className="text-[#A8956B]" />
             </div>
             <div>
-              <h1 className="text-[#5A4F3D]">Current Research</h1>
+              <h1 className="text-[#5A4F3D]">Human-AI Lab, University of Virginia</h1>
               <p className="text-[#A8956B]">Research Assistant</p>
             </div>
           </div>
