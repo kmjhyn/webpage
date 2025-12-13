@@ -69,7 +69,7 @@ export function About({ onNavigate }: AboutProps) {
                   href="https://hai-lab-uva.github.io/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#5A4F3D] underline hover:text-[#8A7859] ml-1 bg-[#F2EAD8] px-1 rounded"
+                  className="relative z-10 pointer-events-auto text-[#5A4F3D] underline hover:text-[#8A7859] ml-1 bg-[#F2EAD8] px-1 rounded"
                 >
                    Human-AI Technology Lab  
                 </a>
