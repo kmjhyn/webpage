@@ -3,8 +3,6 @@ import { Calendar, ArrowLeft, Filter } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
 
 
-export default App;
-
 
 interface BlogListProps {
   onNavigate: (page: string) => void;

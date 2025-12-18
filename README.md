@@ -18,10 +18,20 @@ git push -u origin main
 
 
 # making edits
+npm run dev
+-> shows a localhost and/or network url
+
+# before commit & pushing
 make edits on vs code  
 terminal >>  
+
 npm run build  
 rm -rf docs  
-mv build docs #changing the docs to the newly edited ones  
+mv build docs 
+git add .
+git commit -m "commit message"
+git push
+
+#changing the docs to the newly edited ones  
 
 VS source control, commit all chagnes and push  
