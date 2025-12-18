@@ -1,6 +1,29 @@
 import { useState, useMemo } from 'react';
 import { Calendar, ArrowLeft, Filter } from 'lucide-react';
 import { BackToTop } from '../BackToTop';
+import Snowfall from 'react-snowfall'; //snowfall package added
+
+function App() {
+  return (
+    <>
+      <Snowfall
+        snowflakeCount={120}
+        style={{
+          position: 'fixed',
+          color: '#82C3D9',
+          width: '100vw',
+          height: '100vh',
+          pointerEvents: 'none',
+          zIndex: 50, // UI 위에 보이게
+        }}
+      />
+      {/* 기존 페이지 내용 */}
+    </>
+  );
+}
+
+export default App;
+
 
 interface BlogListProps {
   onNavigate: (page: string) => void;
