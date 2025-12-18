@@ -10,6 +10,8 @@ import { ResearchPortfolio } from './components/pages/ResearchPortfolio';
 import { WorkPortfolio } from './components/pages/WorkPortfolio';
 import { EwhaActivities } from './components/pages/EwhaActivities';
 
+import Snowfall from 'react-snowfall'; //snowfall package added
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -56,10 +58,25 @@ export default function App() {
     }
   };
 
+      
   return (
     <div className="min-h-screen">
+      <Snowfall
+        snowflakeCount={120}
+        color="#82C3D9"
+        style={{
+          position: 'fixed',
+          inset: 0,
+          width: '100vw',
+          height: '100vh',
+          pointerEvents: 'none',
+          zIndex: 30,
+        }}
+      />
+
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       <main>{renderPage()}</main>
     </div>
   );
+
 }
