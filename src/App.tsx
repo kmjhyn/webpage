@@ -62,13 +62,13 @@ export default function App() {
   return (
     <div className="min-h-screen">
       <Snowfall
-        snowflakeCount={120}
+        // snowflakeCount={120}
         color="#82C3D9"
         style={{
-          position: 'fixed',
-          inset: 0,
-          width: '100vw',
-          height: '100vh',
+          // position: 'fixed',
+          // inset: 0,
+          // width: '100vw',
+          // height: '100vh',
           pointerEvents: 'none',
           zIndex: 30,
         }}
